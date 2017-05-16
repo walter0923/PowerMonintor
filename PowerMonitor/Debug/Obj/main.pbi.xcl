@@ -1,4 +1,4 @@
-"D:\IAR Systems\PowerMonitor\main.c"
+"D:\gitHub\PowerMonintor\PowerMonitor\main.c"
 -std=c99
 -ferror-limit=100
 -I

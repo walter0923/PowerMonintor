@@ -10,7 +10,7 @@ unsigned char cc = 1;
 float gg;
 float aa[4]= {0};
 unsigned int systick = 0,secTick = 0;;
-
+/*123*/
 void main(void)
 {
   WDTCTL = WDTPW + WDTHOLD; 
