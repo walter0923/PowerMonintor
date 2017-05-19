@@ -23,9 +23,9 @@ param([String]$debugfile = "");
 
 if ($debugfile -eq "")
 {
-& "D:\IAR Systems\common\bin\cspybat" -f "D:\gitHub\PowerMonintor\PowerMonitor\settings\PowerMonitor.Debug.general.xcl" --backend -f "D:\gitHub\PowerMonintor\PowerMonitor\settings\PowerMonitor.Debug.driver.xcl" 
+& "D:\IAR Systems\common\bin\cspybat" -f "D:\IAR Systems\PowerMonitor\settings\PowerMonitor.Debug.general.xcl" --backend -f "D:\IAR Systems\PowerMonitor\settings\PowerMonitor.Debug.driver.xcl" 
 }
 else
 {
-& "D:\IAR Systems\common\bin\cspybat" -f "D:\gitHub\PowerMonintor\PowerMonitor\settings\PowerMonitor.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\gitHub\PowerMonintor\PowerMonitor\settings\PowerMonitor.Debug.driver.xcl" 
+& "D:\IAR Systems\common\bin\cspybat" -f "D:\IAR Systems\PowerMonitor\settings\PowerMonitor.Debug.general.xcl" --debug_file=$debugfile --backend -f "D:\IAR Systems\PowerMonitor\settings\PowerMonitor.Debug.driver.xcl" 
 }

@@ -1,4 +1,4 @@
-"D:\gitHub\PowerMonintor\PowerMonitor\main.c"
+"D:\IAR Systems\PowerMonitor\main.c"
 -std=c99
 -ferror-limit=100
 -I
@@ -252,7 +252,7 @@ D:\IAR Systems\430\inc\dlib\c
 -D__EDG_SYSV=0
 -D__EDG_ANSIC=1
 -D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
--D__MSP430G2332__=1
+-D__MSP430F1232__=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="D:\IAR Systems\430\lib\dlib\dl430fn.h"
 -D_DLIB_CONFIG_FILE_STRING="D:\\IAR Systems\\430\\lib\\dlib\\dl430fn.h"
 -D__VERSION__="IAR C/C++ Compiler V7.10.1.973/W32 for MSP430"

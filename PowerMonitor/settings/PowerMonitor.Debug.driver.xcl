@@ -1,6 +1,6 @@
 "-p" 
 
-"D:\IAR Systems\430\config\debugger\msp430g2332.ddf" 
+"D:\IAR Systems\430\config\debugger\msp430f1232.ddf" 
 
 "--iv_base" 
 
@@ -16,13 +16,13 @@
 
 "--derivative" 
 
-"MSP430G2xx2" 
+"MSP430F1232" 
 
 "--vccvoltage=3.2" 
 
 "--protocol" 
 
-"automatic" 
+"4wire" 
 
 "--eem" 
 
@@ -50,7 +50,7 @@
 
 "--jtag_speed" 
 
-"medium" 
+"slow" 
 
 "--memtype" 
 
