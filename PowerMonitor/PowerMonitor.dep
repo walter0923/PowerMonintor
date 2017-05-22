@@ -5,71 +5,73 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\in430.h</file>
-            <file>$TOOLKIT_DIR$\inc\msp430f1232.h</file>
-            <file>$PROJ_DIR$\Debug\Exe\PowerMonitor.d43</file>
-            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430f1232.xcl</file>
             <file>$PROJ_DIR$\main.c</file>
+            <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+            <file>$PROJ_DIR$\Debug\List\PowerMonitor.map</file>
             <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\in430.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\PowerMonitor.d43</file>
             <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\PowerMonitor.pbd</file>
-            <file>$PROJ_DIR$\Debug\List\PowerMonitor.map</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
-            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430f1232.xcl</file>
-            <file>C:\Users\Walter\AppData\Local\Temp\Rar$DRa0.228\MSP430F11x2_MSP430F12x_MSP430F12x2_Code_Examples\C\fet120_flash_write.c</file>
-            <file>$PROJ_DIR$\..\..\gitHub\PowerMonintor\PowerMonitor\main.c</file>
-            <file>C:\Users\Walter\AppData\Local\Temp\Rar$DRa0.744\MSP430F11x2_MSP430F12x_MSP430F12x2_Code_Examples\C\fet120_1.c</file>
+            <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430f1232.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\PowerMonitor.ulp</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
+                    <name>ULP430</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
                     <name>XLINK</name>
-                    <file> 2 9</file>
+                    <file> 8 5</file>
                 </tool>
             </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 4 7 12 0</file>
+                </tool>
+                <tool>
+                    <name>ICC430</name>
+                    <file> 0 12 7 4</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\PowerMonitor.d43</name>
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 9</file>
+                    <file> 5</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 12 10 4</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.c</name>
-            <outputs>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 6</file>
-                </tool>
-                <tool>
-                    <name>ICC430</name>
-                    <file> 10</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICC430</name>
-                    <file> 11 1 0 3</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 3 0 1 11</file>
+                    <file> 2 1 11</file>
                 </tool>
             </inputs>
         </file>

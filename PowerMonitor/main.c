@@ -38,10 +38,10 @@ void main(void)
     {
     case 1:
       //Flash_Erase();
-      /*if(!(P3IN & BIT4))
+      if(!(P3IN & BIT4))
       {
         Flash_Erase();
-      }*/
+      }
       //Lower_8V();
       //Over_4V();
       
@@ -75,50 +75,88 @@ void main(void)
       break;
       
     case 4: //over step
-      P3OUT &= ~BIT6;
-      __delay_cycles(100000);
-      P3OUT |= BIT6;
-      __delay_cycles(100000);
-      P3OUT &= ~BIT6;
-      __delay_cycles(100000);
-      P3OUT |= BIT6;
-      __delay_cycles(100000);
-      P3OUT &= ~BIT6;
-      __delay_cycles(100000);
-      P3OUT |= BIT6;
+      __delay_cycles(600000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(50000);
+      P2OUT |= BIT4;
       __delay_cycles(600000);
       cc = 3;
       break;
       
     case 5:     //lower step
-      P3OUT &= ~BIT6;
+      P2OUT &= ~BIT4;
       __delay_cycles(800000);
-      P3OUT |= BIT6;
+      P2OUT |= BIT4;
       __delay_cycles(100000);
-      P3OUT &= ~BIT6;
+      P2OUT &= ~BIT4;
       __delay_cycles(800000);
-      P3OUT |= BIT6;
+      P2OUT |= BIT4;
       __delay_cycles(100000);
-      P3OUT &= ~BIT6;
+      P2OUT &= ~BIT4;
       __delay_cycles(800000);
-      P3OUT |= BIT6;
+      P2OUT |= BIT4;
       __delay_cycles(600000);
       cc = 7;
       break;
       
     case 6:     //normal step
-      P3OUT &= ~BIT6;
-      __delay_cycles(400000);
-      P3OUT |= BIT6;
-      __delay_cycles(400000);
-      P3OUT &= ~BIT6;
-      __delay_cycles(400000);
-      P3OUT |= BIT6;
-      __delay_cycles(400000);
-      P3OUT &= ~BIT6;
-      __delay_cycles(400000);
-      P3OUT |= BIT6;
-      __delay_cycles(600000);
+      __delay_cycles(100000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(100000);
+      P2OUT |= BIT4;
+      __delay_cycles(100000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(100000);
+      P2OUT |= BIT4;
+      __delay_cycles(100000);
+      P2OUT &= ~BIT4;
+      __delay_cycles(100000);
+      P2OUT |= BIT4;
+      __delay_cycles(100000);
       cc = 7;
       break;
       
@@ -147,13 +185,13 @@ void ADC_Ini(void)
 void PORT_Ini(void)
 {
   P1DIR |= BIT0 | BIT1 | BIT2 | BIT3;
-  P2DIR |= BIT2; 
-  P3DIR |= BIT0 | BIT1 | BIT6;
+  P2DIR |= BIT2 | BIT4; 
+  P3DIR |= BIT0 | BIT1;
   P3DIR &= ~BIT4;
   
   P1OUT = BIT0 | BIT1 | BIT2 | BIT3; 
-  P2OUT |= BIT2; 
-  P3OUT |= BIT0 | BIT1 | BIT6;
+  P2OUT |= BIT2 | BIT4; 
+  P3OUT |= BIT0 | BIT1;
   
 }
 
@@ -238,8 +276,8 @@ int Flash_read(int *ptr)
 void Proc(void)
 {
       P1OUT |= (BIT0 | BIT1 | BIT2 | BIT3);
-      P2OUT |= BIT2;
-      P3OUT |= BIT0 | BIT1 | BIT6;
+      P2OUT |= BIT2 | BIT4;
+      P3OUT |= BIT0 | BIT1;
       
       for(int i = 0; i < 4; i ++)
       {
@@ -335,7 +373,7 @@ void Proc(void)
         }
       }
       
-      if((aa[0] + aa[1] + aa[2] + aa[3]) < 8)
+      if((aa[0] + aa[1] + aa[2] + aa[3]) < 9)
       {
         Lower_8V();
       }
