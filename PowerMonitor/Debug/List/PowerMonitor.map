@@ -2,22 +2,20 @@
 #                                                                              #
 #      IAR Universal Linker V6.5.0.91                                          #
 #                                                                              #
-#           Link time     =  22/May/2017  20:19:32                             #
+#           Link time     =  30/May/2017  19:54:59                             #
 #           Target CPU    =  MSP430                                            #
 #           List file     =  "D:\IAR Systems\PowerMonitor\Debug\List\PowerMoni #
 #                            tor.map"                                          #
 #           Output file 1 =  "D:\IAR Systems\PowerMonitor\Debug\Exe\PowerMonit #
-#                            or.d43"                                           #
-#                            Format: ubrof10                                   #
-#                            UBROF version 10.0.6                              #
-#                            Using library modules for C-SPY (-rt)             #
+#                            or.txt"                                           #
+#                            Format: msp430_txt                                #
 #           Command line  =  -f                                                #
-#                            C:\Users\Walter\AppData\Local\Temp\EWEC43.tmp     #
+#                            C:\Users\Walter\AppData\Local\Temp\EW48F4.tmp     #
 #                            ("D:\IAR Systems\PowerMonitor\Debug\Obj\main.r43" #
 #                            -o                                                #
 #                            "D:\IAR Systems\PowerMonitor\Debug\Exe\PowerMonit #
-#                            or.d43"                                           #
-#                            -l                                                #
+#                            or.txt"                                           #
+#                            -Fmsp430_txt -l                                   #
 #                            "D:\IAR Systems\PowerMonitor\Debug\List\PowerMoni #
 #                            tor.map"                                          #
 #                            -xms "-ID:\IAR Systems\430\LIB\" -f               #
@@ -35,7 +33,7 @@
 #                            KSUM=E000-FFDF                                    #
 #                            -Z(CODE)CSTART,ISR_CODE,CODE_ID=E000-FFDF         #
 #                            -P(CODE)CODE=E000-FFDF -Z(CODE)INTVEC=FFE0-FFFF   #
-#                            -Z(CODE)RESET=FFFE-FFFF) -D_STACK_SIZE=50 -rt     #
+#                            -Z(CODE)RESET=FFFE-FFFF) -D_STACK_SIZE=50         #
 #                            "D:\IAR Systems\430\lib\dlib\dl430fn.r43"         #
 #                            -D_DATA16_HEAP_SIZE=50 -s __program_start         #
 #                            -D_DATA20_HEAP_SIZE=50)                           #
@@ -300,46 +298,46 @@ DATA16_Z
                calls direct
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ED20 - ED39 (0x1a bytes), align: 1
+  Relative segment, address: ED24 - ED3D (0x1a bytes), align: 1
   Segment part 37.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           ADC_Ini                 ED20 
+           ADC_Ini                 ED24 
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ECCC - ECF7 (0x2c bytes), align: 1
+  Relative segment, address: ECCC - ECFB (0x30 bytes), align: 1
   Segment part 38.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
            PORT_Ini                ECCC 
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ED3A - ED4D (0x14 bytes), align: 1
+  Relative segment, address: ED3E - ED51 (0x14 bytes), align: 1
   Segment part 36.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Timer_Ini               ED3A 
+           Timer_Ini               ED3E 
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ED82 - ED89 (0x8 bytes), align: 1
+  Relative segment, address: ED74 - ED7B (0x8 bytes), align: 1
   Segment part 35.            Intra module refs:   main
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Flash_Ini               ED82 
-    -------------------------------------------------------------------------
-<CODE> 1 (was CODE)
-  Relative segment, address: EC92 - ECCB (0x3a bytes), align: 1
-  Segment part 32.            Intra module refs:   Proc
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           Over_4V                 EC92 
+           Flash_Ini               ED74 
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
   Relative segment, address: EC58 - EC91 (0x3a bytes), align: 1
+  Segment part 32.            Intra module refs:   Proc
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           Over_4V                 EC58 
+    -------------------------------------------------------------------------
+<CODE> 1 (was CODE)
+  Relative segment, address: EC92 - ECCB (0x3a bytes), align: 1
   Segment part 31.            Intra module refs:   Proc
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Lower_8V                EC58 
+           Lower_8V                EC92 
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
   Relative segment, address: EC10 - EC57 (0x48 bytes), align: 1
@@ -366,11 +364,11 @@ DATA16_Z
                calls direct
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ECF8 - ED1F (0x28 bytes), align: 1
+  Relative segment, address: ECFC - ED23 (0x28 bytes), align: 1
   Segment part 42.            Intra module refs:   Timer_A::??INTVEC 18
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           Timer_A                 ECF8 
+           Timer_A                 ECFC 
                interrupt function
     -------------------------------------------------------------------------
 INTVEC
@@ -395,45 +393,19 @@ DATA16_ID
     *************************************************************************
 
   FILE NAME : D:\IAR Systems\430\lib\dlib\dl430fn.r43
-  LIBRARY MODULE, NAME : ?__dbg_break
-
-  SEGMENTS IN THE MODULE
-  ======================
-<CODE> 1 (was CODE)
-  Relative segment, address: ED96 - ED97 (0x2 bytes), align: 1
-  Segment part 2.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           __DebugBreak            ED96            __exit (?__exit)
-
-    -------------------------------------------------------------------------
-  LIBRARY MODULE, NAME : ?__exit
-
-  SEGMENTS IN THE MODULE
-  ======================
-<CODE> 1 (was CODE)
-  Relative segment, address: ED60 - ED71 (0x12 bytes), align: 1
-  Segment part 2.
-           ENTRY                   ADDRESS         REF BY
-           =====                   =======         ======
-           __exit                  ED60            Segment part 6 (?_exit)
-                                                   _exit (?_exit)
-               calls direct
-
-    -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?_exit
 
   SEGMENTS IN THE MODULE
   ======================
 <CODE> 1 (was CODE)
-  Relative segment, address: ED8E, align: 1
+  Relative segment, address: ED7C, align: 1
   Segment part 0.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           _exit                   ED8E            exit (?exit)
+           _exit                   ED7C            exit (?exit)
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ED8E - ED91 (0x4 bytes), align: 1
+  Relative segment, address: ED7C - ED7F (0x4 bytes), align: 1
   Segment part 6.             Intra module refs:   _exit
 
     -------------------------------------------------------------------------
@@ -510,11 +482,11 @@ RESET
   SEGMENTS IN THE MODULE
   ======================
 <CODE> 1 (was CODE)
-  Relative segment, address: ED92 - ED95 (0x4 bytes), align: 1
+  Relative segment, address: ED80 - ED83 (0x4 bytes), align: 1
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           exit                    ED92            Segment part 18 (?cstart)
+           exit                    ED80            Segment part 18 (?cstart)
                calls direct
 
     -------------------------------------------------------------------------
@@ -603,11 +575,11 @@ RESET
   SEGMENTS IN THE MODULE
   ======================
 <CODE> 1 (was CODE)
-  Relative segment, address: ED4E - ED5F (0x12 bytes), align: 1
+  Relative segment, address: ED52 - ED63 (0x12 bytes), align: 1
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           memcpy                  ED4E            __data16_memcpy (?memzero)
+           memcpy                  ED52            __data16_memcpy (?memzero)
 
     -------------------------------------------------------------------------
   LIBRARY MODULE, NAME : ?memzero
@@ -615,19 +587,32 @@ RESET
   SEGMENTS IN THE MODULE
   ======================
 <CODE> 1 (was CODE)
-  Relative segment, address: ED72 - ED81 (0x10 bytes), align: 1
+  Relative segment, address: ED64 - ED73 (0x10 bytes), align: 1
   Segment part 2.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __data16_memzero        ED72            ?cstart_init_zero (?cstart)
+           __data16_memzero        ED64            ?cstart_init_zero (?cstart)
     -------------------------------------------------------------------------
 <CODE> 1 (was CODE)
-  Relative segment, address: ED8A - ED8D (0x4 bytes), align: 1
+  Relative segment, address: ED84 - ED87 (0x4 bytes), align: 1
   Segment part 3.
            ENTRY                   ADDRESS         REF BY
            =====                   =======         ======
-           __data16_memcpy         ED8A            ?cstart_init_copy (?cstart)
+           __data16_memcpy         ED84            ?cstart_init_copy (?cstart)
                calls direct
+
+    -------------------------------------------------------------------------
+  LIBRARY MODULE, NAME : ?__exit
+
+  SEGMENTS IN THE MODULE
+  ======================
+<CODE> 1 (was CODE)
+  Relative segment, address: ED88 - ED89 (0x2 bytes), align: 1
+  Segment part 2.
+           ENTRY                   ADDRESS         REF BY
+           =====                   =======         ======
+           __exit                  ED88            Segment part 6 (?_exit)
+                                                   _exit (?_exit)
 
 
 
@@ -656,7 +641,7 @@ CSTACK                                 02B0 - 02FF              50   rel    1
 DATA16_C                                  E000                       dse    0
 DATA16_ID                              E000 - E000               1   rel    1
 CSTART                                 E002 - E029              28   rel    1
-<CODE> 1                               E02A - ED97             D6E   rel    1
+<CODE> 1                               E02A - ED89             D60   rel    1
 INTVEC                                 FFE0 - FFF3              14   com    1
 RESET                                  FFFE - FFFF               2   rel    1
 
@@ -666,7 +651,7 @@ RESET                                  FFFE - FFFF               2   rel    1
                 *                                      *
                 ****************************************
 
- 3 500 bytes of CODE  memory
+ 3 486 bytes of CODE  memory
    106 bytes of DATA  memory (+ 28 absolute )
      1 byte  of CONST memory
 

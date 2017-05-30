@@ -76,8 +76,6 @@ void main(void)
       
     case 4: //over step
       __delay_cycles(600000);
-      P2OUT &= ~BIT4;
-      __delay_cycles(50000);
       P2OUT |= BIT4;
       __delay_cycles(50000);
       P2OUT &= ~BIT4;
@@ -123,30 +121,30 @@ void main(void)
       P2OUT &= ~BIT4;
       __delay_cycles(50000);
       P2OUT |= BIT4;
+      __delay_cycles(50000);
+      P2OUT &= ~BIT4;
       __delay_cycles(600000);
       cc = 3;
       break;
       
     case 5:     //lower step
-      P2OUT &= ~BIT4;
-      __delay_cycles(800000);
       P2OUT |= BIT4;
+      __delay_cycles(800000);
+      P2OUT &= ~BIT4;
       __delay_cycles(100000);
-      P2OUT &= ~BIT4;
-      __delay_cycles(800000);
       P2OUT |= BIT4;
+      __delay_cycles(800000);
+      P2OUT &= ~BIT4;
       __delay_cycles(100000);
-      P2OUT &= ~BIT4;
-      __delay_cycles(800000);
       P2OUT |= BIT4;
+      __delay_cycles(800000);
+      P2OUT &= ~BIT4;
       __delay_cycles(600000);
       cc = 7;
       break;
       
     case 6:     //normal step
       __delay_cycles(100000);
-      P2OUT &= ~BIT4;
-      __delay_cycles(100000);
       P2OUT |= BIT4;
       __delay_cycles(100000);
       P2OUT &= ~BIT4;
@@ -156,6 +154,8 @@ void main(void)
       P2OUT &= ~BIT4;
       __delay_cycles(100000);
       P2OUT |= BIT4;
+      __delay_cycles(100000);
+      P2OUT &= ~BIT4;
       __delay_cycles(100000);
       cc = 7;
       break;
@@ -190,7 +190,8 @@ void PORT_Ini(void)
   P3DIR &= ~BIT4;
   
   P1OUT = BIT0 | BIT1 | BIT2 | BIT3; 
-  P2OUT |= BIT2 | BIT4; 
+  P2OUT |= BIT2; 
+  P2OUT &= ~BIT4;
   P3OUT |= BIT0 | BIT1;
   
 }

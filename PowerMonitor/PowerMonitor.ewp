@@ -670,7 +670,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.r43</state>
                 </option>
                 <option>
                     <name>AMultibyteSupport</name>
@@ -741,7 +741,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state>PowerMonitor.d43</state>
+                    <state>PowerMonitor.txt</state>
                 </option>
                 <option>
                     <name>OutputFormat</name>
@@ -807,7 +807,7 @@
                 </option>
                 <option>
                     <name>XclFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\lnk430g2332.xcl</state>
+                    <state>$TOOLKIT_DIR$\config\linker\lnk430f1232.xcl</state>
                 </option>
                 <option>
                     <name>XclFileSlave</name>
@@ -899,7 +899,7 @@
                 </option>
                 <option>
                     <name>DebugInformation</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>RuntimeControl</name>

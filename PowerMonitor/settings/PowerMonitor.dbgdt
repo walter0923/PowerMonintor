@@ -1099,7 +1099,7 @@
                 <expressions>
                     <item>gg</item>
                     <item>aa</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
