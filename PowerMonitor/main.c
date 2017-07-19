@@ -189,7 +189,7 @@ void PORT_Ini(void)
   P3DIR |= BIT0 | BIT1;
   P3DIR &= ~BIT4;
   
-  P1OUT = BIT0 | BIT1 | BIT2 | BIT3; 
+  P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3); 
   P2OUT |= BIT2; 
   P2OUT &= ~BIT4;
   P3OUT |= BIT0 | BIT1;
@@ -276,7 +276,7 @@ int Flash_read(int *ptr)
 
 void Proc(void)
 {
-      P1OUT |= (BIT0 | BIT1 | BIT2 | BIT3);
+      P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
       P2OUT |= BIT2 | BIT4;
       P3OUT |= BIT0 | BIT1;
       
@@ -326,8 +326,8 @@ void Proc(void)
       {
         if((aa[0] > aa[1]) && (aa[0] > aa[2]) && (aa[0] > aa[3]))
         {
-          P1OUT |= BIT0 | BIT1 | BIT2 | BIT3;
-          P1OUT &= ~(BIT0);
+          P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+          P1OUT |= (BIT0);
         }
         if(aa[0] > 4.00)
         {
@@ -339,8 +339,8 @@ void Proc(void)
       {
         if((aa[1] > aa[0]) && (aa[1] > aa[2]) && (aa[1] > aa[3]))
         {
-          P1OUT |= BIT0 | BIT1 | BIT2 | BIT3;
-          P1OUT &= ~(BIT1);
+          P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+          P1OUT |= (BIT1);
         }
         if(aa[1] > 4.00)
         {
@@ -352,8 +352,8 @@ void Proc(void)
       {
         if((aa[2] > aa[0]) && (aa[2] > aa[1]) && (aa[2] > aa[3]))
         {
-          P1OUT |= BIT0 | BIT1 | BIT2 | BIT3;
-          P1OUT &= ~(BIT2);
+          P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+          P1OUT |= (BIT2);
         }
         if(aa[2] > 4.00)
         {
@@ -365,8 +365,8 @@ void Proc(void)
       {
         if((aa[3] > aa[0]) && (aa[3] > aa[1]) && (aa[3] > aa[2]))
         {
-          P1OUT |= BIT0 | BIT1 | BIT2 | BIT3;
-          P1OUT &= ~(BIT3);
+          P1OUT &= ~(BIT0 | BIT1 | BIT2 | BIT3);
+          P1OUT |= (BIT3);
         }
         if(aa[3] > 4.00)
         {

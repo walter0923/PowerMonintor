@@ -18,7 +18,7 @@
 
 "MSP430F1232" 
 
-"--vccvoltage=3.2" 
+"--vccvoltage=3.4" 
 
 "--protocol" 
 
